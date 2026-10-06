@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post | Storyline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="post">
+  <header class="site-header header-light">
+    <nav class="navbar wrapper" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span>Story</span>line</a>
+      <div class="nav-actions" id="navActions"></div>
+    </nav>
+  </header>
+
+  <main class="detail-main wrapper">
+    <a class="back-link" href="index.html">← All posts</a>
+    <div class="status" id="pageStatus">Loading post…</div>
+    <article class="post-detail" id="postDetail"></article>
+  </main>
+
+  <div class="confirm-modal" id="deleteModal" aria-hidden="true">
+    <section class="confirm-card" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <div class="danger-icon">!</div>
+      <h2 id="confirmTitle">Delete this post?</h2>
+      <p>This action cannot be undone. Are you sure you want to continue?</p>
+      <div class="confirm-actions">
+        <button class="button button-secondary" id="cancelDelete" type="button">Cancel</button>
+        <button class="button button-danger" id="confirmDelete" type="button">Yes, delete</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

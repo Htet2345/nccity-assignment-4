@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post | Storyline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="editor">
+  <header class="site-header header-light">
+    <nav class="navbar wrapper" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span>Story</span>line</a>
+      <div class="nav-actions" id="navActions"></div>
+    </nav>
+  </header>
+
+  <main class="editor-main wrapper">
+    <a class="back-link" id="editorBack" href="index.html">← Cancel and go back</a>
+    <section class="editor-layout">
+      <div class="editor-heading">
+        <p class="eyebrow" id="editorEyebrow">New story</p>
+        <h1 id="editorTitle">Create a post</h1>
+        <p>Share an idea, an experience, or something you have learned.</p>
+      </div>
+
+      <form class="editor-form" id="postForm" novalidate>
+        <div class="form-field">
+          <label for="title">Post title</label>
+          <input id="title" name="title" type="text" placeholder="Give your story a clear title" required>
+          <small class="field-error" id="titleError"></small>
+        </div>
+        <div class="form-field">
+          <label for="imageUrl">Cover image URL <span>(optional)</span></label>
+          <input id="imageUrl" name="imageUrl" type="url" placeholder="https://example.com/image.jpg">
+          <small class="field-hint">A generated cover will be used if this is empty.</small>
+        </div>
+        <div class="form-field">
+          <label for="author">Author</label>
+          <input id="author" name="author" type="text" value="Admin" required>
+          <small class="field-error" id="authorError"></small>
+        </div>
+        <div class="form-field">
+          <label for="content">Content</label>
+          <textarea id="content" name="content" rows="10" placeholder="Write your story here…" required></textarea>
+          <small class="field-error" id="contentError"></small>
+        </div>
+        <p class="form-message error-text" id="editorError" role="alert"></p>
+        <div class="form-actions">
+          <a class="button button-secondary" href="index.html">Cancel</a>
+          <button class="button button-primary" id="savePost" type="submit">Publish post</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

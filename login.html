@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Storyline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login" class="auth-page">
+  <header class="site-header header-light">
+    <nav class="navbar wrapper" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span>Story</span>line</a>
+      <a class="text-link" href="index.html">← Back to posts</a>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card">
+      <div class="auth-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </div>
+      <p class="eyebrow">Welcome back</p>
+      <h1>Log in to Storyline</h1>
+      <p class="muted">Use the demo account to manage the blog.</p>
+
+      <div class="demo-account">
+        <strong>Demo login</strong>
+        <span>admin@example.com</span>
+        <span>password123</span>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" value="admin@example.com" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" value="password123" autocomplete="current-password" required>
+        </div>
+        <p class="form-message error-text" id="loginError" role="alert"></p>
+        <button class="button button-primary button-full" id="loginButton" type="submit">Log in</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
